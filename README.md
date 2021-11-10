@@ -125,6 +125,31 @@ Records:
 
 ![Screen Shot 2021-11-10 at 16 58 50](https://user-images.githubusercontent.com/2103017/141133022-20dde558-c963-4ad3-8cdd-299c524cb938.png)
 
+## Test Coverage
+Service layer code coverage: %81
+
+## Logging
+`LogFilter` is used the log all transactions with their URI and payload into console.
+
+Sample logs of an entire transaction:
+```
+2021-11-10 16:07:26.899  INFO 50687 --- [nio-9090-exec-2] c.a.foreignexchange.logging.LogFilter    : Starting transaction for method : POST, requested URI : /api/foreign-exchange/rate
+2021-11-10 16:07:26.904  INFO 50687 --- [nio-9090-exec-2] c.a.foreignexchange.logging.LogFilter    : Request body: [{
+    "sourceCurrency": "EUR",
+    "targetCurrency": "TRY"
+}]
+2021-11-10 16:07:30.172  INFO 50687 --- [nio-9090-exec-2] c.a.f.s.impl.FrankfurterServiceProvider  : Validation source currency: EUR
+2021-11-10 16:07:30.178  INFO 50687 --- [nio-9090-exec-2] c.a.f.s.impl.FrankfurterServiceProvider  : Validation target currency: TRY
+2021-11-10 16:07:36.917  INFO 50687 --- [nio-9090-exec-2] c.a.foreignexchange.logging.LogFilter    : Response body: [{"pair":"EUR/TRY","rate":11.2605}]
+2021-11-10 16:07:36.919  INFO 50687 --- [nio-9090-exec-2] c.a.foreignexchange.logging.LogFilter    : Finishing the transaction for req : /api/foreign-exchange/rate
+```
+
+`ServiceExceptionHandler` is used the catch exceptions. It logs helpful and meaningful messages into console and sets the
+appropriate HttpStatus code of response.
+
+## API Documentation
+Swagger, Javadoc and README.md is generated for documentation
+
 ## Application Links
 Base URL: http://localhost:9090
 H2 Console: http://localhost:9090/h2-console
