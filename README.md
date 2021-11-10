@@ -118,9 +118,11 @@ Sample Output:
 H2 Database has been used for persisting exchange conversions. For test purposes and simulating pageable responses, 1000 random `Conversion` records are created before the application is started.
 
 Conversion Entity:
+
 ![Screen Shot 2021-11-10 at 16 58 41](https://user-images.githubusercontent.com/2103017/141133038-b843da40-6457-4c4f-a5e2-7c705d51f17c.png)
 
 Records:
+
 ![Screen Shot 2021-11-10 at 16 58 50](https://user-images.githubusercontent.com/2103017/141133022-20dde558-c963-4ad3-8cdd-299c524cb938.png)
 
 ## Application Links
