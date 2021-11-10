@@ -151,9 +151,9 @@ appropriate HttpStatus code of response.
 Swagger, Javadoc and README.md is generated for documentation
 
 ## Application Links
-Base URL: http://localhost:9090
-H2 Console: http://localhost:9090/h2-console
-Swagger: http://localhost:9090/swagger-ui/index.html?configUrl=/api-docs/swagger-config#/
-Frankfurter API URL: https://api.frankfurter.app
-Frankfurter Documentation: https://www.frankfurter.app/
-Javadoc: /javadoc/index.html
+- Base URL: http://localhost:9090
+- H2 Console: http://localhost:9090/h2-console
+- Swagger: http://localhost:9090/swagger-ui/index.html?configUrl=/api-docs/swagger-config#/
+- Frankfurter API URL: https://api.frankfurter.app
+- Frankfurter Documentation: https://www.frankfurter.app/
+- Javadoc: /javadoc/index.html
