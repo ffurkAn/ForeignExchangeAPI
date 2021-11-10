@@ -7,7 +7,6 @@ com.atanriverdi.foreignexchange.error
 com.atanriverdi.foreignexchange.logging
 com.atanriverdi.foreignexchange.model.entity
 com.atanriverdi.foreignexchange.model.entity.dto
-com.atanriverdi.foreignexchange.model.frankfurter
 com.atanriverdi.foreignexchange.model.mapper
 com.atanriverdi.foreignexchange.model.request
 com.atanriverdi.foreignexchange.model.response

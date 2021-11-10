@@ -66,7 +66,7 @@ class ConversionServiceImplTest {
 
         Assertions.assertEquals(conversionDTO.getSourceCurrencyCode(), conversionService.save(conversionDTO).getSourceCurrencyCode());
         Assertions.assertEquals(conversionDTO.getTargetCurrencyCode(), conversionService.save(conversionDTO).getTargetCurrencyCode());
-        Assertions.assertTrue(conversionDTO.getTargetAmount().compareTo(conversionService.save(conversionDTO).getTargetAmount()) == 0);
+        Assertions.assertEquals(conversionDTO.getTargetAmount(),conversionService.save(conversionDTO).getTargetAmount());
 
     }
 

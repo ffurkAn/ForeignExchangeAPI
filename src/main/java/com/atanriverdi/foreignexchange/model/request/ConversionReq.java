@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.validation.constraints.AssertTrue;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
@@ -13,16 +14,20 @@ import javax.validation.constraints.Pattern;
 @Setter
 public class ConversionReq {
 
-    // todo add pattern
     @NotNull
+    @NotBlank
+    @Pattern(regexp = RegexConstants.AMOUNT)
+    @Schema(example = "100", pattern = RegexConstants.AMOUNT)
     private String sourceAmount;
 
     @NotNull
+    @NotBlank
     @Pattern(regexp = RegexConstants.CURRENCY_CODE)
     @Schema(example = "EUR", pattern = RegexConstants.CURRENCY_CODE)
     private String sourceCurrency;
 
     @NotNull
+    @NotBlank
     @Pattern(regexp = RegexConstants.CURRENCY_CODE)
     @Schema(example = "TRY", pattern = RegexConstants.CURRENCY_CODE)
     private String targetCurrency;

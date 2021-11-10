@@ -18,7 +18,7 @@ public interface ConversionMapper {
     ConversionRes entityToRes(Conversion conversion);
 
 
-    default String getFormattedAmount(BigDecimal targetAmount) { // todo why default
+    default String getFormattedAmount(BigDecimal targetAmount) {
         NumberFormat numberFormat = NumberFormat.getInstance();
         numberFormat.setMaximumFractionDigits(4);
         return numberFormat.format(targetAmount);

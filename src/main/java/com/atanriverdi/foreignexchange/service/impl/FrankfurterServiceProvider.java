@@ -19,7 +19,7 @@ import java.util.Currency;
 @NoArgsConstructor
 public class FrankfurterServiceProvider implements ServiceProvider {
 
-    private static FrankfurterServiceProvider single_instance = null;
+    private FrankfurterServiceProvider singletonProvider = null;
     private RestTemplate restTemplate;
     private ApplicationConfiguration applicationConfiguration;
 
@@ -63,10 +63,10 @@ public class FrankfurterServiceProvider implements ServiceProvider {
 
     @Override
     public <T> T getInstance(ApplicationConfiguration applicationConfiguration, RestTemplate restTemplate) {
-        if (single_instance == null)
-            single_instance = new FrankfurterServiceProvider(applicationConfiguration, restTemplate);
+        if (singletonProvider == null)
+            singletonProvider = new FrankfurterServiceProvider(applicationConfiguration, restTemplate);
 
-        return (T) single_instance;
+        return (T) singletonProvider;
     }
 
 }

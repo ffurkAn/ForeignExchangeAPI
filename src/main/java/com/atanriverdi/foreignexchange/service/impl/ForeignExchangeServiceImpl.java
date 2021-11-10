@@ -41,9 +41,6 @@ public class ForeignExchangeServiceImpl implements ForeignExchangeService {
     @Autowired
     RestTemplate restTemplate;
 
-//    @Autowired
-//    ServiceProviderRegistry serviceProviderRegistry;
-
     /**
      * Fetch rates from service provider for given currencies and amount.
      *
@@ -53,25 +50,18 @@ public class ForeignExchangeServiceImpl implements ForeignExchangeService {
      * @return
      */
     private String getRate(String sourceCurrencyCode, String targetCurrencyCode, String amount, ProviderType providerType) {
-//         return serviceProviderRegistry.getServiceBean(providerType.getValue()).getRate(sourceCurrencyCode, targetCurrencyCode, amount);
-
         return getProvider(providerType).getRate(sourceCurrencyCode, targetCurrencyCode, amount);
     }
 
     private ServiceProvider getProvider(ProviderType providerType) {
 
         try {
-            Class c = Class.forName(providerType.getValue());
+            Class<?> c = Class.forName(providerType.getValue());
             return ((ServiceProvider) c.newInstance()).getInstance(applicationConfiguration, restTemplate);
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
+        } catch (ClassNotFoundException | IllegalAccessException | InstantiationException e) {
+            log.error("Given provider type [{}] has no concrete class, so that default provider is being returned", providerType.getValue(), e);
+            return new DefaultProvider();
         }
-
-        return new DefaultProvider();
 
     }
 
