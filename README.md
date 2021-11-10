@@ -126,9 +126,9 @@ Records:
 ![Screen Shot 2021-11-10 at 16 58 50](https://user-images.githubusercontent.com/2103017/141133022-20dde558-c963-4ad3-8cdd-299c524cb938.png)
 
 ## Application Links
-Base URL: http://localhost:9090
-H2 Console: http://localhost:9090/h2-console
-Swagger: http://localhost:9090/swagger-ui/index.html?configUrl=/api-docs/swagger-config#/
-Frankfurter API URL: https://api.frankfurter.app
-Frankfurter Documentation: https://www.frankfurter.app/
-Javadoc: /javadoc/index.html
+- Base URL: http://localhost:9090
+- H2 Console: http://localhost:9090/h2-console
+- Swagger: http://localhost:9090/swagger-ui/index.html?configUrl=/api-docs/swagger-config#/
+- Frankfurter API URL: https://api.frankfurter.app
+- Frankfurter Documentation: https://www.frankfurter.app/
+- Javadoc: /javadoc/index.html
