@@ -115,7 +115,7 @@ Sample Output:
 
 
 ## DB Configuration
-H2 Database has been used for persisting exchange conversions. For test purposes and simulating pageable responses, 1000 random `Conversion` records are created before the application is started. For a better performance to query conversions, `transactionId` and ` transactionDate` can be indexed.
+H2 Database has been used for persisting exchange conversions. For test purposes and simulating pageable responses, 1000 random `Conversion` records are created before the application is started. For a better performance to query conversions, `transactionId` and ` transactionDate` can be indexed. ([ConversionServiceImpl#init](https://github.com/ffurkAn/ForeignExchangeAPI/blob/master/src/main/java/com/atanriverdi/foreignexchange/service/impl/ConversionServiceImpl.java))
 
 Conversion Entity:
 
